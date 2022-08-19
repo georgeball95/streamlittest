@@ -17,7 +17,7 @@ for i in db_content:
   
     if i["username"] == name:
     
-        st.markdown("your name is {} and you have an account".format(name)
+        st.markdown("your name is {} and you have an account".format(name))
     else:
         st.markdown("you do not yet have an account")      
             
