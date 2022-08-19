@@ -12,17 +12,12 @@ db = deta.Base("default")
 #get db
 db_content = db.fetch().items
 
+signed_up = []
+for i in db_content:
+    signed_up.append(i["name"])
+
 if name:
-
-    for i in db_content:
-
-        #st.markdown(i)
-
-        if i["name"] == name:
-
-            st.markdown("you have an account")
-        else:
-            st.markdown("you do not yet have an account")      
-
-    
-    #st.write(db_content)
+    if name in signed_up:
+        st.markdown("you have an account")
+    else:
+        st.markdown("you do not yet have an account")      
