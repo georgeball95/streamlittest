@@ -15,10 +15,12 @@ db_content = db.fetch().items
 
 for i in db_content:
   
-    if i["username"] == name:
+    st.markdown(i)
+  
+    #if i["username"] == name:
     
-        st.markdown("your name is {} and you have an account".format(name))
-    else:
-        st.markdown("you do not yet have an account")      
+        #st.markdown("your name is {} and you have an account".format(name))
+    #else:
+        #st.markdown("you do not yet have an account")      
             
 #st.write(db_content)
