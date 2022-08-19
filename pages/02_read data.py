@@ -4,6 +4,9 @@ from deta import Deta
 # Data to be written to Deta Base
 name = st.text_input("Your name")
 
+# Connect to Deta Base with your Project Key
+deta = Deta(st.secrets["deta_key"])
+
 # Create a new database "example-db"
 # If you need a new database, just use another name.
 db = deta.Base("default")
