@@ -8,6 +8,7 @@ deta = Deta(st.secrets["deta_key"])
 name = st.text_input("Your name")
 
 #read db
+db = deta.Base("default2")
 db = deta.Base("default")
 #get db
 db_content = db.fetch().items
