@@ -1,18 +1,19 @@
 import streamlit as st
 from deta import Deta
 
-# Data to be written to Deta Base
-name = st.text_input("Your name")
-
 # Connect to Deta Base with your Project Key
 deta = Deta(st.secrets["deta_key"])
 
-# Create a new database "example-db"
-# If you need a new database, just use another name.
+# Data to be written to Deta Base
+name = st.text_input("Your name")
+
+#FIND USER
+#db_content = db.fetch().items
+
 db = deta.Base("default")
 
-if name:
-    db.put({"name": name, "age": age})
+#if name:
+#    db.put({"name": name, "age": age})
 
 "---"
 "Here's everything stored in the database:"
